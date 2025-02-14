@@ -1,0 +1,172 @@
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 25px 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  position: relative;
+  margin-left: 35px;
+}
+
+.navbar ul li a {
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative; 
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; 
+  left: 0%; 
+  transform: translateX(2%); 
+  height: 4px;
+  width: 0; 
+  border-radius: 5px;
+  background-color: #3d7cf0;
+  transition: 0.3s ease-in; 
+}
+
+/* Hover Effect */
+.navbar ul li:hover a::after {
+  width: 100%;
+}
+
+/* Active Link Style */
+.navbar ul li .active {
+  color: #3d7cf0;
+}
+
+.navbar ul li .active::after {
+  width: 100%;
+}
+
+/*======================= Menu Bar Responsive ========================*/
+.slidenav {
+  position: fixed;
+  top: 0;
+  right: -250px; 
+  width: 250px;
+  height: 100%;
+  background: #222;
+  transition: right 0.3s ease-in-out;
+  padding: 20px;
+  box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.slidenav.open {
+  right: 0; 
+}
+
+/* Close Button */
+.slidenav .close {
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/* SlideNav Links */
+.navigation1 {
+  list-style: none;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation1 li {
+  margin: 20px 20px;
+}
+
+.navigation1 li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  position: relative; 
+  padding-bottom: 5px;
+}
+
+.navigation1 li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; 
+  left: 0%; 
+  transform: translateX(2%); 
+  height: 2px;
+  width: 0; 
+  border-radius: 5px;
+  background-color: #3d7cf0;
+  transition: 0.3s ease-in; 
+}
+
+
+/* Hover Effect */
+.navigation1 li:hover a::after {
+  width: 100%;
+}
+
+/* Active Link Style */
+.navigation1 li .active {
+  color: #3d7cf0;
+}
+
+.navigation1 li .active::after {
+  width: 100%;
+}
+
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar .topmenu {
+    display: none;
+  }
+
+  .logo{
+    font-size: 15px;
+  }
+}
+
